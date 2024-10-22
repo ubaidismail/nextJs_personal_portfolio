@@ -1,29 +1,29 @@
 "use client";
 import React from "react";
-import { Vortex } from "../ui/vortex";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import Link from "next/link";
 
-
-export default function VortexDemo() {
+export default function BackgroundBeamsWithCollisionDemo() {
   return (
-    <div className=" mx-auto rounded-md  h-[30rem] overflow-hidden">
-      <Vortex
-        backgroundColor="black"
-        className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
-      >
-        <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
-          About Me
-        </h2>
-        <p className="text-white text-sm md:text-2xl mt-6 text-center">
-        I’m a software developer with over 6 years of hands-on experience building websites, web apps, mobile apps, and SaaS solutions. I’ve completed more than 250 projects, covering everything from design and coding to testing and deployment. Skilled in LAMP and MERN stacks, I also work with various back-end frameworks, database management, and cloud services. Currently, I collaborate with international clients to deliver customized, scalable solutions, offering development and project management expertise to bring their ideas to life.
-        </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-          <button className="px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-900 to-pink-900 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-            <Link href={'/portfolio'}>View Portfolio</Link>
-          </button>
-
+    <BackgroundBeamsWithCollision>
+      <div>
+      <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
+        About{" "}
+        <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
+          <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
+            <span className="">Me!</span>
+          </div>
+          <div className="relative bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500 py-4">
+            <span className="">Me!</span>
+          </div>
         </div>
-      </Vortex>
-    </div>
+      </h2>
+      <div className="container mx-aut">
+      <p className="text-white text-sm md:text-2xl mt-6 text-center">
+        I’m a software developer with over 6 years of hands-on experience building websites, web apps, mobile apps, and SaaS solutions. I’ve completed more than 250 projects, covering everything from design and coding to testing and deployment. Skilled in LAMP and MERN stacks, I also work with various back-end frameworks, database management, and cloud services. Currently, I collaborate with international clients to deliver customized, scalable solutions, offering development and project management expertise to bring their ideas to life.
+      </p>
+      </div>
+      </div>
+    </BackgroundBeamsWithCollision>
   );
 }

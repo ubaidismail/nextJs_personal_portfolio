@@ -21,7 +21,7 @@ export default function HeroHighlightDemo() {
         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
         Meet Ubaid Ismail, Your{" "}
-        <Highlight className="text-black dark:text-white">
+        <Highlight className="text-black dark:text-white ">
         Next Tech Partner
         </Highlight>
         {" "} — Building Digital Solutions, One Line at a Time
