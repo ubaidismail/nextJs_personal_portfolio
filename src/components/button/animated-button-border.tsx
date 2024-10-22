@@ -4,7 +4,13 @@ import { Button } from "../ui/moving-border";
 import Link from "next/link";
 
 
-const MovingBorderDemo = ({ HomeButtonText, HomeButtonLink }) => {
+interface MovingBorderDemoProps {
+    HomeButtonText: string;
+    HomeButtonLink: string;
+  }
+
+const MovingBorderDemo: React.FC<MovingBorderDemoProps> = ({ HomeButtonText, HomeButtonLink }) => {
+
   return (
     <div className="text-center mt-10">
       <Button
