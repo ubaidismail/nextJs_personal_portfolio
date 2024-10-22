@@ -1,10 +1,12 @@
 "use client";
 import React from "react";
 import { Vortex } from "../ui/vortex";
+import Link from "next/link";
+
 
 export default function VortexDemo() {
   return (
-    <div className="w-[calc(100%-4rem)] mx-auto rounded-md  h-[30rem] overflow-hidden">
+    <div className=" mx-auto rounded-md  h-[30rem] overflow-hidden">
       <Vortex
         backgroundColor="black"
         className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
@@ -16,10 +18,10 @@ export default function VortexDemo() {
         I’m a software developer with over 6 years of hands-on experience building websites, web apps, mobile apps, and SaaS solutions. I’ve completed more than 250 projects, covering everything from design and coding to testing and deployment. Skilled in LAMP and MERN stacks, I also work with various back-end frameworks, database management, and cloud services. Currently, I collaborate with international clients to deliver customized, scalable solutions, offering development and project management expertise to bring their ideas to life.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
-          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
-            Skills
+          <button className="px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-900 to-pink-900 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">
+            <Link href={'/portfolio'}>View Portfolio</Link>
           </button>
-          <button className="px-4 py-2  text-white ">View Porfolio</button>
+
         </div>
       </Vortex>
     </div>

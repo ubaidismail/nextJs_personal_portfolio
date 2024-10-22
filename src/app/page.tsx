@@ -9,12 +9,7 @@ export default function Home() {
     <section>
       <HomeBanner />
 
-
-      <div className="about-section text-center">
-        <div className="container mx-auto">
-          <About />
-        </div>
-      </div>
+      <About />
 
     </section>
 
