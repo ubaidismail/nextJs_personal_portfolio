@@ -1,13 +1,15 @@
-import { section } from "framer-motion/client";
+
 import HomeBanner from "@/components/homebanner/banner";
 import About from "@/components/about/about";
 
 
+
 export default function Home() {
+  
   return (
 
     <section>
-      <HomeBanner />
+      <HomeBanner  />
 
       <About />
 

@@ -1,8 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "../ui/hero-highlight";
+import MovingBorderDemo from "../button/animated-button-border";
 
 export default function HeroHighlightDemo() {
+  const HomeButtonText = "let's chat";
+  const HomeButtonLink = "https://wa.me/+971507364124";
   return (
     <HeroHighlight>
       <motion.h1
@@ -24,8 +27,9 @@ export default function HeroHighlightDemo() {
         <Highlight className="text-black dark:text-white ">
         Next Tech Partner
         </Highlight>
-        {" "} — Building Digital Solutions, One Line at a Time
+        {" "} — Building Digital Relations!
       </motion.h1>
+      <MovingBorderDemo HomeButtonText={HomeButtonText} HomeButtonLink={HomeButtonLink}  />
     </HeroHighlight>
   );
 }
