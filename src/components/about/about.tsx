@@ -7,7 +7,7 @@ import MovingBorderDemo from "../button/animated-button-border";
 export default function BackgroundBeamsWithCollisionDemo() {
 
   const ButtonText = "View Portfolio";
-  const ButtonLink = "#";
+  const ButtonLink = "/portfolio";
 
   return (
     <BackgroundBeamsWithCollision>

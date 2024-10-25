@@ -25,3 +25,7 @@ body {
     text-wrap: balance;
   }
 }
+.flexi-navbar{
+  background: linear-gradient(45deg, #965af663, #db4ca957);
+  backdrop-filter: blur(11px);
+}

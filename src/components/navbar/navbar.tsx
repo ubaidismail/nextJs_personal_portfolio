@@ -4,7 +4,6 @@ import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-
 export default function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
 
@@ -17,7 +16,7 @@ export default function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} active={active} item="Home">
           </MenuItem>
         </Link>
-        <Link href={'#'}>
+        <Link href={'/portfolio'}>
           <MenuItem setActive={setActive} active={active} item="Portfolio">
           </MenuItem>
         </Link>
@@ -25,8 +24,8 @@ export default function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} active={active} item="Connect">
           </MenuItem>
         </Link>
-        <Link href={'/contact'}>
-          <MenuItem setActive={setActive} active={active} item="Resume">
+        <Link href={'/UBAID-IN-RESUME.pdf'} target="_blank">
+          <MenuItem setActive={setActive}  active={active} item="Resume">
           </MenuItem>
         </Link>
         

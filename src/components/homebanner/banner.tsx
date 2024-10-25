@@ -4,7 +4,7 @@ import { HeroHighlight, Highlight } from "../ui/hero-highlight";
 import MovingBorderDemo from "../button/animated-button-border";
 
 export default function HeroHighlightDemo() {
-  const HomeButtonText = "let's chat";
+  const HomeButtonText = "Let's chat";
   const HomeButtonLink = "https://wa.me/+971507364124";
   return (
     <HeroHighlight>

@@ -17,7 +17,7 @@ const MovingBorderDemo: React.FC<MovingBorderDemoProps> = ({ HomeButtonText, Hom
         borderRadius="1.75rem"
         className="bg-white bg-black text-black dark:text-white border-neutral-900 dark:border-slate-800"
       >
-       <Link href={HomeButtonLink == '#'? '#' : HomeButtonLink} target={HomeButtonLink != '#'? '_blank' : ''} >{HomeButtonText}</Link>
+       <Link href={HomeButtonLink == '#'? '#' : HomeButtonLink} target={HomeButtonLink != '/portfolio'? '_blank' : ''} >{HomeButtonText}</Link>
       </Button>
     </div>
   );
