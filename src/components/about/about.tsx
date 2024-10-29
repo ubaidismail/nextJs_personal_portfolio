@@ -24,7 +24,7 @@ export default function BackgroundBeamsWithCollisionDemo() {
         </div>
       </h2>
       <div className="container mx-aut">
-      <p className="text-white text-sm md:text-2xl mt-6 text-center">
+      <p className="dark:text-white text-black text-sm md:text-2xl mt-6 text-center">
         I’m a software developer with over 6 years of hands-on experience building websites, web apps, mobile apps, and SaaS solutions. I’ve completed more than 250 projects, covering everything from design and coding to testing and deployment. Skilled in LAMP and MERN stacks, I also work with various back-end frameworks, database management, and cloud services. Currently, I collaborate with international clients to deliver customized, scalable solutions, offering development and project management expertise to bring their ideas to life.
       </p>
 
