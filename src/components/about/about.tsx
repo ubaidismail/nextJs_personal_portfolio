@@ -12,7 +12,7 @@ export default function BackgroundBeamsWithCollisionDemo() {
   return (
     <BackgroundBeamsWithCollision>
       <div>
-      <h2 className="text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
+      <h2 className="text-2xl pt-[50px] relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-black dark:text-white font-sans tracking-tight">
         About{" "}
         <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
           <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
@@ -24,11 +24,11 @@ export default function BackgroundBeamsWithCollisionDemo() {
         </div>
       </h2>
       <div className="container mx-aut">
-      <p className="dark:text-white text-black text-sm md:text-2xl mt-6 text-center mx-4">
+      <p className="dark:text-white text-black text-sm md:text-2xl text-center mx-4">
         I’m a software developer with over 6 years of hands-on experience building websites, web apps, mobile apps, and SaaS solutions. I’ve completed more than 250 projects, covering everything from design and coding to testing and deployment. Skilled in LAMP and MERN stacks, I also work with various back-end frameworks, database management, and cloud services. Currently, I collaborate with international clients to deliver customized, scalable solutions, offering development and project management expertise to bring their ideas to life.
       </p>
 
-      <div className="mb-4">
+      <div className="pb-[60px]">
         <MovingBorderDemo HomeButtonText={ButtonText} HomeButtonLink={ButtonLink}  />
       </div>
       </div>
