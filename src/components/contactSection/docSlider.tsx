@@ -67,7 +67,7 @@ export default function FloatingDockDemo() {
   ];
   return (
     <div className="flex items-center justify-center h-[35rem] w-full flex-col">
-        <h1 className='text-7xl font-bold text-center pb-[40px]'>Let's Conect!</h1>
+        <h1 className='sm:text-7xl text-3xl font-bold text-center pb-[40px]'>Let's Conect!</h1>
       <FloatingDock
         mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
