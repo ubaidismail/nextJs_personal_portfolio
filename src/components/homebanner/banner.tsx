@@ -25,7 +25,7 @@ export default function HeroHighlightDemo() {
       >
         Meet Ubaid Ismail, Your{" "}
         <Highlight className="text-black dark:text-white ">
-        Next Tech Partner
+         Tech Partner
         </Highlight>
         {" "} — Building Digital Relations!
       </motion.h1>
