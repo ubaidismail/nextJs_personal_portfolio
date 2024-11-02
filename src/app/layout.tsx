@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
@@ -34,10 +35,11 @@ export default function RootLayout({
         <main className="flex flex-col justify-between">
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
         </main>
         
-      </body>
+      </body> 
     </html>
   );
 }
