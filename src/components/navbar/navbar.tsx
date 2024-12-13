@@ -20,6 +20,10 @@ export default function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} active={active} item="Portfolio">
           </MenuItem>
         </Link>
+        <Link href={'/blogs'}>
+          <MenuItem setActive={setActive} active={active} item="Blogs">
+          </MenuItem>
+        </Link>
         <Link href={'/contact'}>
           <MenuItem setActive={setActive} active={active} item="Connect">
           </MenuItem>
