@@ -20,7 +20,7 @@ export default async function Page({
     params: { slug: string; };
 }) {
     const { slug } = params;
-    const filePath = `content/${params.slug}.md`
+    const filePath = `public/content/${params.slug}.md`
     if (!existsSync(filePath)) {
         notFound()
     }

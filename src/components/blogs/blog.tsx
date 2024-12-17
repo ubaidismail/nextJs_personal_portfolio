@@ -5,9 +5,9 @@ import { FaCalendar } from "react-icons/fa6";
 import { FaPencil } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const dirContent = fs.readdirSync("content", "utf-8");
+const dirContent = fs.readdirSync("public/content", "utf-8");
 const blogs = dirContent.map(file => {
-  const fileContent = fs.readFileSync(`content/${file}`, "utf-8");
+  const fileContent = fs.readFileSync(`public/content/${file}`, "utf-8");
   const data = matter(fileContent);
   return data;
 });
@@ -58,7 +58,7 @@ function Blog() {
 
                 </p>
                 <a
-                  href={`/blogs/${blog.data.slug}`}
+                  href={`/blog/${blog.data.slug}`}
                   className="inline-flex items-center dark:text-gray-300 hover:text-purple-700 transition duration-300"
                 >
                   Read More <FaArrowRightLong className='ml-2' />
