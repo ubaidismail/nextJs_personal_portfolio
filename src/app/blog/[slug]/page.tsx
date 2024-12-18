@@ -22,7 +22,7 @@ export default async function Page({
     const { slug } = params;
     const filePath = `public/content/${params.slug}.md`
     if (!existsSync(filePath)) {
-        // notFound()
+        notFound()
     }
 
     const fileContent = fs.readFileSync(filePath, "utf-8");
