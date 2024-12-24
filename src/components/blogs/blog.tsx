@@ -5,9 +5,9 @@ import { FaCalendar } from "react-icons/fa6";
 import { FaPencil } from "react-icons/fa6";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const dirContent = fs.readdirSync("public/content", "utf-8");
+const dirContent = fs.readdirSync("public/all-blogs", "utf-8");
 const blogs = dirContent.map(file => {
-  const fileContent = fs.readFileSync(`public/content/${file}`, "utf-8");
+  const fileContent = fs.readFileSync(`public/all-blogs/${file}`, "utf-8");
   const data = matter(fileContent);
   return data;
 });
