@@ -22,27 +22,13 @@ export default async function Page({
     const { slug } = params;
     const filePath = `public/all-blogs/${params.slug}.md`;
 
-    if (!existsSync(filePath)) {
-        notFound()
-    }
+    // if (!existsSync(filePath)) {
+    //     notFound()
+    // }
 
     const fileContent = fs.readFileSync(filePath, "utf-8");
     const { content, data } = matter(fileContent)
-    const handleShare = () => {
-        // Get current page URL
-        const currentURL = window.location.href;
-        
-        // Copy to clipboard
-        navigator.clipboard.writeText(currentURL)
-          .then(() => {
-            // Optional: Add some user feedback
-            alert('Link copied to clipboard!');
-            // Or use a toast notification if you have one implemented
-          })
-          .catch((err) => {
-            console.error('Failed to copy URL:', err);
-          });
-      };
+    
     const processor = unified()
         .use(remarkParse)
         .use(remarkRehype)
