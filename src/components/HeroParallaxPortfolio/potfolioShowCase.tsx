@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import DSDTImage from '../../../public/images/DSDT.png';
@@ -6,21 +5,18 @@ import DSDTInner from '../../../public/images/dsdt-desk.png';
 import PPHImage from '../../../public/images/PHH.png';
 import PHHPortfolio1 from '../../../public/images/phh-desk.png';
 import PHHPortfolio2 from '../../../public/images/phh-desk-2.png';
-import STAFFImage from '../../../public/images/STAFFHN.png';
-import Job3Image from '../../../public/images/JOB3.png';
-import AlphadgeImage from '../../../public/images/img-2.png';
-import CRIPTOValue from '../../../public/images/CRIPTO.png';
-import artdicacao from '../../../public/images/artdicacao.png'
 import RPT from '../../../public/images/RPT.png'
 import RPTInner from '../../../public/images/RPT-inner.png'
 import RPTInner2 from '../../../public/images/RPT-inner2.png'
-import Securance from '../../../public/images/img-3.png'
+import artdicacao from '../../../public/images/artdicacao.png'
+import Job3Image from '../../../public/images/JOB3.png';
+import CRIPTOValue from '../../../public/images/CRIPTO.png';
 import React from "react";
 import { Carousel, Card } from "../ui/apple-cards-carousel";
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
+    <Card key={`card-${index}`} card={card} index={index} />
   ));
 
   return (
