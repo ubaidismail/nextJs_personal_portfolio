@@ -1,7 +1,6 @@
+"use client";
 // components/FloatingHearts.tsx
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaHeart } from 'react-icons/fa';
 
 export const FloatingHeart = () => {
     return (
