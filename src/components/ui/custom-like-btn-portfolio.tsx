@@ -10,7 +10,8 @@ import { isClient } from '@/utils/isClient';
 
 
 
-export const LikeButton = ({ projectTitle }: { projectTitle: string }) => {
+// arrow function
+const LikeButton = ({ projectTitle }: { projectTitle: string }): JSX.Element => {
     const [isLiked, setIsLiked] = useState(false);
     const { showFloatingHeart, setShowFloatingHeart } = useAppContext();
 
@@ -90,3 +91,4 @@ export const LikeButton = ({ projectTitle }: { projectTitle: string }) => {
         </motion.div>
     );
 };
+export default LikeButton;

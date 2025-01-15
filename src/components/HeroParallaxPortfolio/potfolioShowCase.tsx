@@ -14,9 +14,11 @@ import CRIPTOValue from '../../../public/images/CRIPTO.png';
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { Carousel, Card } from "../ui/apple-cards-carousel";
-import { LikeButton } from "../ui/custom-like-btn-portfolio";
-
-
+// import { LikeButton } from "../ui/custom-like-btn-portfolio";
+import dynamic from 'next/dynamic';
+const LikeButton = dynamic(() => import('../ui/custom-like-btn-portfolio'), {
+  ssr: false,
+});
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
