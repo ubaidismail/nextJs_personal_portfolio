@@ -16,6 +16,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { StaticImageData } from "next/image"
+import { FloatingHeart } from "../../components/HeroParallaxPortfolio/FloatingHeart";
+import { useAppContext } from '../../context/AppContext';
+
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -27,13 +30,14 @@ type Card = {
   title: string;
   category: string;
   content: React.ReactNode;
+  likeBTN: React.ReactNode;
 };
 
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
   currentIndex: number;
 }>({
-  onCardClose: () => {},
+  onCardClose: () => { },
   currentIndex: 0,
 });
 
@@ -42,6 +46,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -126,7 +131,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
+                className="relative last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
               >
                 {item}
               </motion.div>
@@ -166,7 +171,7 @@ export const Card = ({
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
-
+  const { showFloatingHeart } = useAppContext();
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -237,19 +242,30 @@ export const Card = ({
           </div>
         )}
       </AnimatePresence>
+      {card.likeBTN} 
+      
+      
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
+
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
-        <div className="relative z-40 p-8">
-          <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
-          >
-            {card.category}
-          </motion.p>
+        <div className="relative z-40 p-8 w-full">
+          <div className="flex justify-between">
+
+            <motion.p
+              layoutId={layout ? `category-${card.category}` : undefined}
+              className="text-white text-sm md:text-base font-medium font-sans text-left"
+            >
+              <span>{card.category}</span>
+            </motion.p>
+
+             
+          </div>
+          {showFloatingHeart && <FloatingHeart />}
+          {/* <FloatingHeart /> */}
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
             className="text-white text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"

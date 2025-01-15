@@ -12,7 +12,11 @@ import artdicacao from '../../../public/images/artdicacao.png'
 import Job3Image from '../../../public/images/JOB3.png';
 import CRIPTOValue from '../../../public/images/CRIPTO.png';
 import React from "react";
+import { FaRegHeart } from "react-icons/fa";
 import { Carousel, Card } from "../ui/apple-cards-carousel";
+import { LikeButton } from "../ui/custom-like-btn-portfolio";
+
+
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -20,9 +24,11 @@ export function AppleCardsCarouselDemo() {
   ));
 
   return (
+    
     <div className="w-full h-full py-20">
+      
       <h2 className="max-w-7xl mt-[70px] pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
-       Milestones Achieved So Far!
+        Showcase
       </h2>
       <Carousel items={cards} />
     </div>
@@ -217,12 +223,16 @@ const data = [
     title: "Pet Health Harbour",
     src: PPHImage,
     content: <ContentPHH />,
+    likeBTN: <LikeButton projectTitle="Pet Health Harbour" />,
+    
+    
   },
   {
     category: "Job Portal",
     title: "EDU Career Portal",
     src: DSDTImage,
     content: <ContentDSDT />,
+    likeBTN: <LikeButton projectTitle="EDU Career Portal" />,
   },
  
   {
@@ -230,12 +240,16 @@ const data = [
     title: "Royal Pickups",
     src: RPT,
     content: <ContentRPT />,
+    likeBTN: <LikeButton projectTitle="Royal Pickups" />,
+
   },
   {
     category: "Crypto Currency",
     title: "Crypto Community",
     src: CRIPTOValue,
     content: <ContentCiptoItlaliano />,
+    likeBTN: <LikeButton projectTitle="Crypto Community" />,
+
   },
 
   {
@@ -243,6 +257,8 @@ const data = [
     title: "Job3 Net",
     src: Job3Image,
     content: <ContentJob3 />,
+    likeBTN: <LikeButton projectTitle="Job3 Net" />,
+
   },
  
   {
@@ -250,5 +266,6 @@ const data = [
     title: "Art Dicacao",
     src: artdicacao,
     content: <ContentShopify />,
+    likeBTN: <LikeButton projectTitle="Art Dicacao" />,
   },
 ];
