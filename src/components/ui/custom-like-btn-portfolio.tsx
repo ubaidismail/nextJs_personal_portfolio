@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { FaRegHeart, FaHeart } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import getUserCountry from "js-user-country";
-import { FloatingHeart } from '../HeroParallaxPortfolio/FloatingHeart';
+
 import { useAppContext } from '../../context/AppContext';
 import { isClient } from '@/utils/isClient';
 
@@ -79,7 +79,7 @@ export const LikeButton = ({ projectTitle }: { projectTitle: string }) => {
             <motion.a
                 onClick={handleLike}
                 whileHover={{ scale: 1.1 }}
-                className={`transition-colors duration-200 z-50 absolute right-6 top-8  ${isLiked ? 'text-red-500' : 'text-white hover:text-red-500'
+                className={`transition-colors duration-200 z-40 absolute right-6 top-8  ${isLiked ? 'text-red-500' : 'text-white hover:text-red-500'
                     }`}
             //   disabled={isLiked}
             >
@@ -87,7 +87,6 @@ export const LikeButton = ({ projectTitle }: { projectTitle: string }) => {
                 {/* display floading heart when someone liked and hide after 3sec */}
             </motion.a>
 
-            {/* <FloatingHeart /> */}
         </motion.div>
     );
 };
