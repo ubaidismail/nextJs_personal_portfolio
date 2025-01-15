@@ -2,7 +2,7 @@
 // components/FloatingHearts.tsx
 import { motion } from 'framer-motion';
 
-export const FloatingHeart = () => {
+function FloatingHeart () {
     return (
         <>
 
@@ -20,3 +20,4 @@ export const FloatingHeart = () => {
         </>
     );
 };
+export default FloatingHeart;

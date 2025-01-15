@@ -16,9 +16,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { StaticImageData } from "next/image"
-import { FloatingHeart } from "../../components/HeroParallaxPortfolio/FloatingHeart";
+// import { FloatingHeart } from "../../components/HeroParallaxPortfolio/FloatingHeart";
 import { useAppContext } from '../../context/AppContext';
+import dynamic from 'next/dynamic';
 
+// dynamic import
+const FloatingHeart = dynamic(() => import('../../components/HeroParallaxPortfolio/FloatingHeart'), {
+  ssr: false,
+});
 
 interface CarouselProps {
   items: JSX.Element[];

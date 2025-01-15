@@ -75,7 +75,7 @@ export const LikeButton = ({ projectTitle }: { projectTitle: string }) => {
 
 
     return (
-        <motion.div>
+        <motion.div className='relative'>
             <motion.a
                 onClick={handleLike}
                 whileHover={{ scale: 1.1 }}
