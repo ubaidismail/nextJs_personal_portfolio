@@ -57,9 +57,8 @@ const LikeButton = ({ projectTitle }: { projectTitle: string }): JSX.Element => 
                     // we need to set transiton to hide that
 
                 }, 4000);
-                const response = await fetch(`https://ubaidismail.com/api/like-notification`, {
+                const response = await fetch(`https://www.ubaidismail.com/api/like-notification`, {
                     method: 'POST',
-                    mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json',
                     },
