@@ -1,22 +1,28 @@
-import { NextResponse } from 'next/server';
-const nodemailer = require('nodemailer');
+import { NextApiRequest, NextApiResponse } from 'next';
+import nodemailer from 'nodemailer';
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': 'https://ubaidismail.com',
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-  'Vary': 'Origin', // Add this header
+const allowCors = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void>) => async (req: NextApiRequest, res: NextApiResponse) => {
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+  return await fn(req, res);
 };
-export async function POST(request:Request) {
+
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
-    
-    if (request.method === 'OPTIONS') {
-      return new NextResponse(null, {
-        status: 204,
-        headers: corsHeaders,
-      });
+    if (req.method === 'OPTIONS') {
+      return res.status(204).json({ message: 'OK' });
     }
-    const data = await request.json();
+
+    const data = await req.json();
     const { userAgent, language, platform, timestamp, projectTitle, country, city, region, ip } = data;
 
     // Create transporter with more detailed configuration
@@ -59,13 +65,11 @@ export async function POST(request:Request) {
 
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ message: 'Like notification sent successfully' });
+    return res.status(201).json({ message: 'Like notification sent successfully' });
   } catch (error) {
     console.error('Error:', error);
-    return NextResponse.json(
-      { message: 'Error sending like notification' },
-      { status: 500 }
-    );
+    return res.status(500).json({ message: 'Error sending like notification' });
   }
-}
-// module.exports = allowCors(handler)
+};
+
+export default allowCors(handler);
