@@ -1,10 +1,21 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
-export async function POST(request) {
+const corsHeaders = {
+  'Access-Control-Allow-Origin': 'https://ubaidismail.com',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Vary': 'Origin', // Add this header
+};
+export async function POST(request:Request) {
   try {
     
-
+    if (request.method === 'OPTIONS') {
+      return new NextResponse(null, {
+        status: 204,
+        headers: corsHeaders,
+      });
+    }
     const data = await request.json();
     const { userAgent, language, platform, timestamp, projectTitle, country, city, region, ip } = data;
 
