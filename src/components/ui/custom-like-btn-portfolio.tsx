@@ -32,7 +32,7 @@ const LikeButton = ({ projectTitle }: { projectTitle: string }): JSX.Element => 
             try {
                 // Get browser information
                 const baseUrl = process.env.NODE_ENV === 'production' 
-                ? 'https://ubaidismail.com' 
+                ? 'https://www.ubaidismail.com' 
                 : '';
                 const browserInfo = {
                     userAgent: isClient() ? window.navigator.userAgent : '',

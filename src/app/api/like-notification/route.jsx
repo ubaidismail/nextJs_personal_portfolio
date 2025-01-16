@@ -1,34 +1,28 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+// const allowCors = fn => async (req, res) => {
+//   res.setHeader('Access-Control-Allow-Credentials', true)
+//   res.setHeader('Access-Control-Allow-Origin', '*')
+//   // another common pattern
+//   // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+//   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+//   res.setHeader(
+//     'Access-Control-Allow-Headers',
+//     'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+//   )
+//   if (req.method === 'OPTIONS') {
+//     res.status(200).end()
+//     return
+//   }
+//   return await fn(req, res)
+// }
 export async function POST(request) {
   try {
-    // Get the origin from the request headers
-    const origin = request.headers.get('origin');
-    
-    // Define allowed origins
-    const allowedOrigins = [
-      'https://ubaidismail.com',
-      'http://localhost:3000',
-      'https://www.ubaidismail.com'
-    ];
-
-    // Check if the origin is allowed
-    if (!allowedOrigins.includes(origin)) {
-      return new NextResponse(
-        JSON.stringify({ message: 'Unauthorized' }),
-        {
-          status: 403,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-    }
-
     const data = await request.json();
     const { userAgent, language, platform, timestamp, projectTitle, country, city, region, ip } = data;
 
+    // Create transporter with more detailed configuration
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
@@ -42,6 +36,7 @@ export async function POST(request) {
       }
     });
 
+    // Test the connection
     await transporter.verify().catch(console.error);
 
     const mailOptions = {
@@ -67,60 +62,13 @@ export async function POST(request) {
 
     await transporter.sendMail(mailOptions);
 
-    // Return response with CORS headers
-    return new NextResponse(
-      JSON.stringify({ message: 'Like notification sent successfully' }),
-      {
-        status: 200,
-        headers: {
-          'Access-Control-Allow-Origin': origin,
-          'Access-Control-Allow-Methods': 'POST, OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type',
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-
+    return NextResponse.json({ message: 'Like notification sent successfully' });
   } catch (error) {
     console.error('Error:', error);
-    return new NextResponse(
-      JSON.stringify({ message: 'Error sending like notification' }),
-      {
-        status: 500,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST, OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type',
-          'Content-Type': 'application/json',
-        },
-      }
+    return NextResponse.json(
+      { message: 'Error sending like notification' },
+      { status: 500 }
     );
   }
 }
-
-// Handle OPTIONS request for CORS preflight
-export async function OPTIONS(request) {
-  const origin = request.headers.get('origin');
-  
-  const allowedOrigins = [
-    'https://ubaidismail.com',
-    'http://localhost:3000',
-    'https://www.ubaidismail.com'
-  ];
-
-  if (!allowedOrigins.includes(origin)) {
-    return new NextResponse(null, {
-      status: 403,
-    });
-  }
-
-  return new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': origin,
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Max-Age': '86400', // 24 hours cache for preflight requests
-    },
-  });
-}
+// module.exports = allowCors(handler)
