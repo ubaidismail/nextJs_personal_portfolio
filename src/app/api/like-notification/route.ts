@@ -1,28 +1,23 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-const allowCors = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void>) => async (req: NextApiRequest, res: NextApiResponse) => {
-  res.setHeader('Access-Control-Allow-Credentials', 'true');
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-  );
-  if (req.method === 'OPTIONS') {
-    res.status(200).end();
-    return;
-  }
-  return await fn(req, res);
+const corsHeaders = {
+  'Access-Control-Allow-Origin': 'https://ubaidismail.com',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+  'Vary': 'Origin', // Add this header
+  'Access-Control-Allow-Credentials': 'true', // Add this header
 };
-
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+export async function POST(request:Request) {
   try {
-    if (req.method === 'OPTIONS') {
-      return res.status(204).json({ message: 'OK' });
+    
+    if (request.method === 'OPTIONS') {
+      return new NextResponse(null, {
+        status: 204,
+        headers: corsHeaders,
+      });
     }
-
-    const data = await req.json();
+    const data = await request.json();
     const { userAgent, language, platform, timestamp, projectTitle, country, city, region, ip } = data;
 
     // Create transporter with more detailed configuration
@@ -65,11 +60,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     await transporter.sendMail(mailOptions);
 
-    return res.status(201).json({ message: 'Like notification sent successfully' });
+    return NextResponse.json({ message: 'Like notification sent successfully' });
   } catch (error) {
     console.error('Error:', error);
-    return res.status(500).json({ message: 'Error sending like notification' });
+    return NextResponse.json(
+      { message: 'Error sending like notification' },
+      { status: 500 }
+    );
   }
-};
-
-export const POST = allowCors(handler);
+}
+// module.exports = allowCors(handler)

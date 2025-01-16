@@ -59,6 +59,7 @@ const LikeButton = ({ projectTitle }: { projectTitle: string }): JSX.Element => 
                 }, 4000);
                 const response = await fetch(`https://ubaidismail.com/api/like-notification`, {
                     method: 'POST',
+                    mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json',
                     },
