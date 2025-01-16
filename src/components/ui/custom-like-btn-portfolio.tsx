@@ -32,7 +32,7 @@ const LikeButton = ({ projectTitle }: { projectTitle: string }): JSX.Element => 
             try {
                 // Get browser information
                 const baseUrl = process.env.NODE_ENV === 'production' 
-                ? 'https://ubaidismail.com' 
+                ? 'https://www.ubaidismail.com' 
                 : '';
                 const browserInfo = {
                     userAgent: isClient() ? window.navigator.userAgent : '',
@@ -57,7 +57,7 @@ const LikeButton = ({ projectTitle }: { projectTitle: string }): JSX.Element => 
                     // we need to set transiton to hide that
 
                 }, 4000);
-                const response = await fetch(`https://www.ubaidismail.com/api/like-notification`, {
+                const response = await fetch(`${baseUrl}/api/like-notification`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
