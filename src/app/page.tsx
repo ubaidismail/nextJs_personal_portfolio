@@ -2,7 +2,7 @@
 import HomeBanner from "@/components/homebanner/banner";
 import About from "@/components/about/about";
 import Services from "@/components/expertise/services-skill";
-import Blog from "@/components/blogs/blog";
+import BlogHomePage from "@/components/blogHome/blogHome";
 
 
 export default function Home() {
@@ -15,7 +15,8 @@ export default function Home() {
       <About />
       
       <Services />
-      <Blog />
+        
+      <BlogHomePage />
       
     </section>
 
