@@ -11,6 +11,10 @@ const corsHeaders = {
 
 export async function POST(request: Request) {
   try {
+    console.log('Environment check:', {
+      hasUser: !!process.env.EMAIL_USER,
+      hasPass: !!process.env.EMAIL_PASSWORD,
+    });
     if (request.method === 'OPTIONS') {
       return new NextResponse(null, {
         status: 204,
@@ -23,15 +27,12 @@ export async function POST(request: Request) {
 
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
+      }
     });
 
     await transporter.verify().catch((error) => {
