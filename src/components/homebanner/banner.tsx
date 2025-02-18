@@ -30,7 +30,7 @@ export default function HeroHighlightDemo() {
         </Highlight>
         {" "}
       </motion.h1>
-      <Link href={HomeButtonLink} target="_blank" className="p-[3px] relative text-center mx-auto block mt-[40px] w-[40%]">
+      <Link href={HomeButtonLink} target="_blank" className="p-[3px] relative text-center mx-auto block mt-[40px] w-[60%]  xl:w-[40%]">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
         <div className="px-8 py-2  hover:bg-black rounded-[6px]  relative group transition duration-200 text-white bg-transparent">
           Let's Talk!
