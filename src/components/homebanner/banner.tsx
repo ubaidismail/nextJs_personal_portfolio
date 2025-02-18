@@ -24,9 +24,9 @@ export default function HeroHighlightDemo() {
         }}
         className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
       >
-        Need a Solution?{" "} <br />
+        Need A Pro?{" "} <br />
         <Highlight className="text-black dark:text-white ">
-        Just hit the fucking button!
+        Just Click And Grow!
         </Highlight>
         {" "}
       </motion.h1>
