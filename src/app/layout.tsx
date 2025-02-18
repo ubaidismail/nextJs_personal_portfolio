@@ -19,8 +19,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ubaid Ismail",
-  description: "Software Engineer",
+  title: "Ubaid Ismail - Software Enginee",
+  description: "I write code!",
   keywords: "web developer, full stack developer, need web developer, findapro, need website designer, need web developer, ubaid ismail"
 };
 
