@@ -29,7 +29,7 @@ export function AppleCardsCarouselDemo() {
     
     <div className="w-full h-full py-20">
       
-      <h1 className="max-w-7xl mt-[70px] pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+      <h1 className="max-w-7xl mt-[70px] pl-4 mx-auto text-xl md:text-5xl font-bold  font-sans">
         Showcase
       </h1>
       <Carousel items={cards} />

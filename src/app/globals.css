@@ -29,6 +29,11 @@ body {
   background: linear-gradient(45deg, #965af663, #db4ca957);
   backdrop-filter: blur(11px);
 }
+
+nav a{
+  color: #fff;
+  font-weight: 500;
+}
 ol, ul {
   list-style: disc;
 }

@@ -30,7 +30,7 @@ const config: Config = {
             }
           },
         
-  // darkMode: 'class',
+  darkMode: 'class', // the behavior of this is to control default dark mode behabior of any system. If it's not enabled  the color theme will be switched to based on user system
   theme: {
     extend: {
       colors: {

@@ -50,16 +50,16 @@ function Blog() {
                   <FaPencil /> <span className='ml-2'>{blog.data.author}</span>
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 dark:text-gray-300">
+                <h3 className="text-xl font-semibold mb-3 text-gray-300">
                   {blog.data.title}
                 </h3>
-                <p className="mb-4 dark:text-gray-300">
+                <p className="mb-4 text-gray-300">
                   {blog.data.excerpt || blog.data.description.slice(0, 150) + '...'}
 
                 </p>
                 <a
                   href={`/blog/${blog.data.slug}`}
-                  className="inline-flex items-center dark:text-gray-300 hover:text-purple-700 transition duration-300"
+                  className="inline-flex items-center text-gray-300 hover:text-purple-700 transition duration-300"
                 >
                   Read More <FaArrowRightLong className='ml-2' />
                 </a>

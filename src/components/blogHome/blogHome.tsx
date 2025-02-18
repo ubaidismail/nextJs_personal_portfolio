@@ -16,7 +16,7 @@ const blogs = dirContent.map(file => {
 function BlogHomePage() {
   return (
     <div className="container mx-auto px-4 mb-[100px]">
-      <h2 className="pt-[10px] text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-dark dark:text-white font-sans tracking-tight">Storie
+      <h2 className="pt-[10px] text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-white dark:text-white font-sans tracking-tight">Storie
         <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
           <div className="absolute left-0 top-[1px] bg-clip-text bg-no-repeat text-transparent bg-gradient-to-r py-4 from-purple-500 via-violet-500 to-pink-500 [text-shadow:0_0_rgba(0,0,0,0.1)]">
             <span className="">s</span>
@@ -50,16 +50,16 @@ function BlogHomePage() {
                   <FaPencil /> <span className='ml-2'>{blog.data.author}</span>
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-3 dark:text-gray-300">
+                <h3 className="text-xl font-semibold mb-3 text-gray-300">
                   {blog.data.title}
                 </h3>
-                <p className="mb-4 dark:text-gray-300">
+                <p className="mb-4 text-gray-300">
                   {blog.data.excerpt || blog.data.description.slice(0, 150) + '...'}
 
                 </p>
                 <a
                   href={`/blog/${blog.data.slug}`}
-                  className="inline-flex items-center dark:text-gray-300 hover:text-purple-700 transition duration-300"
+                  className="inline-flex items-center text-gray-300 hover:text-purple-700 transition duration-300"
                 >
                   Read More <FaArrowRightLong className='ml-2' />
                 </a>
