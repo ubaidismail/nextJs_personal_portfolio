@@ -28,7 +28,7 @@ export default function Navbar({ className }: { className?: string }) {
           <MenuItem setActive={setActive} active={active} item="Connect">
           </MenuItem>
         </Link>
-        <Link href={'/UBAID-IN-RESUME.pdf'} target="_blank">
+        <Link href={'/UbaidResume_IN.pdf'} target="_blank">
           <MenuItem setActive={setActive}  active={active} item="Resume">
           </MenuItem>
         </Link>
