@@ -20,7 +20,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Ubaid Ismail - Software Engineer", 
-  description: "I write code!",
+  description: "I am a software engineer with a passion for building web applications.",
   keywords: "web developer, full stack developer, need web developer, findapro, need website designer, need web developer, ubaid ismail"
 };
 

@@ -33,32 +33,33 @@ export const projects = [
         "Includes SaaS product development, CRM, ERP, and custom enterprise solutions, Industry-specific software solutions (healthcare, real estate, finance) Cloud-native development (AWS, Azure, Google Cloud)",
         link: "https://calendly.com/ubaidismail/30min",
     },
-    {
-        title: "Mobile App Development",
-        description:
-            "Native app development (iOS, Android) Cross-platform app development (React Native, Flutter), Progressive Web Apps for mobile, App maintenance and upgrades",
-        link: "https://calendly.com/ubaidismail/30min",
-    },
-    {
-        title: "UI/UX - Graphic Design",
-        description:
-            "Wireframing and prototyping, User research and persona development, Mobile and web design, Product design for SaaS applications, User interface and experience optimization",
-        link: "https://calendly.com/ubaidismail/30min",
-    },
-    {
-        title: "Business - Sales Funnels Development",
-        description:
-            "Lead generation, client hunting through various platform, Keen-eye in finding hidden opportunities",
-        link: "https://calendly.com/ubaidismail/30min",
-    },
-    {
-        title: "AI",
-        description:"Natural Language Processing (NLP) applications (e.g., chatbots), OPEN AI API Integration, Data science and model training",
-        link: "https://calendly.com/ubaidismail/30min",
-    },
+    // {
+    //     title: "Mobile App Development",
+    //     description:
+    //         "Native app development (iOS, Android) Cross-platform app development (React Native, Flutter), Progressive Web Apps for mobile, App maintenance and upgrades",
+    //     link: "https://calendly.com/ubaidismail/30min",
+    // },
+    // {
+    //     title: "UI/UX - Graphic Design",
+    //     description:
+    //         "Wireframing and prototyping, User research and persona development, Mobile and web design, Product design for SaaS applications, User interface and experience optimization",
+    //     link: "https://calendly.com/ubaidismail/30min",
+    // },
+    // {
+    //     title: "Business - Sales Funnels Development",
+    //     description:
+    //         "Lead generation, client hunting through various platform, Keen-eye in finding hidden opportunities",
+    //     link: "https://calendly.com/ubaidismail/30min",
+    // },
+   
     {
         title: "API Development and Integration",
         description:"Custom API development, Integration with third-party services (payment gateways, social media APIs), RESTful and GraphQL APIs, API documentation and management",
+        link: "https://calendly.com/ubaidismail/30min",
+    },
+    {
+        title: "AI Integration / Model Development",
+        description:"Natural Language Processing (NLP) applications (e.g., chatbots), OPEN AI API Integration, Data science and model training",
         link: "https://calendly.com/ubaidismail/30min",
     },
     {
