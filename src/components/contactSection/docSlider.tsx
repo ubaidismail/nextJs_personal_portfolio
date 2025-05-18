@@ -48,21 +48,21 @@ export default function FloatingDockDemo() {
       href: "https://github.com/ubaidismail",
     },
     
-    {
-      title: "Fiverr",
-      icon: (
-        <IconBrandFiverr className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "https://www.fiverr.com/ubaidismail280",
-    },
+    // {
+    //   title: "Fiverr",
+    //   icon: (
+    //     <IconBrandFiverr className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "https://www.fiverr.com/ubaidismail280",
+    // },
 
-    {
-      title: "Upwork",
-      icon: (
-        <IconBrandUpwork className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "https://www.upwork.com/freelancers/~01efe0806a6ed2eee2",
-    },
+    // {
+    //   title: "Upwork",
+    //   icon: (
+    //     <IconBrandUpwork className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    //   ),
+    //   href: "https://www.upwork.com/freelancers/~01efe0806a6ed2eee2",
+    // },
     
   ];
   return (
