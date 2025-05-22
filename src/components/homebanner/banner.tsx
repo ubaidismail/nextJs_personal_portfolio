@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function HeroHighlightDemo() {
   const HomeButtonText = "Let's Talk";
-  const HomeButtonLink = "https://wa.me/+971507364124";
+  const HomeButtonLink = "https://wa.me/+18253055570";
   return (
     <section className="banner-hero">
     <HeroHighlight>
