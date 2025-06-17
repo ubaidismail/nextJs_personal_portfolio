@@ -11,9 +11,9 @@ export default function HeroHighlightDemo() {
   const HomeButtonLink = "https://wa.me/+18253055570";
   const ScheduleCall = "https://calendly.com/ubaidismail/30min";
   return (
-    <section className="container banner-hero mx-auto">
+    <section className="banner-hero">
       <HeroHighlight>
-        <div className="banner-sec flex items-center mt-[100px]">
+        <div className="container mx-auto banner-sec flex items-center mt-[100px]">
           <div className="ban-txt">
             <motion.h1
               initial={{
