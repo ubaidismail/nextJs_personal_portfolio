@@ -59,12 +59,12 @@ export const projects = [
     // },
    
     {
-        title: "API Development and Integration",
+        title: "API Development & Integration",
         description:"Custom API development, Integration with third-party services (payment gateways, social media APIs), RESTful and GraphQL APIs, API documentation and management",
         link: "https://calendly.com/ubaidismail/30min",
     },
     {
-        title: "Consulting and Digital Transformation",
+        title: "Consulting & Digital Transformation",
         description:
             "Digital strategy and transformation consulting, Technology stack evaluation and selection, IT and business process optimization, Data migration and systems integration",
         link: "https://calendly.com/ubaidismail/30min",
