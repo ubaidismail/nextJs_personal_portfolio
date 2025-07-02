@@ -3,7 +3,7 @@ import { HoverEffect } from "../ui/card-hover-effect";
 
 export default function CardHoverEffectDemo() {
     return (
-        <div className="max-w-5xl mx-auto px-8 dark:bg-dark">
+        <div className="max-w-8xl mx-auto px-20 dark:bg-dark">
 
 
             <h2 className="pt-[50px] text-2xl relative z-20 md:text-4xl lg:text-7xl font-bold text-center text-white dark:text-white font-sans tracking-tight">Expertise
@@ -22,7 +22,13 @@ export default function CardHoverEffectDemo() {
 }
 export const projects = [
     {
-        title: "Web/Design Development",
+        title: "AI Agents & Workflow Automation",
+        description:
+            "Includes AI agent development using AgentKit, AI-powered automation with Make.com and n8n, AI-powered chatbots, AI-based process automation, custom AI apps, and AI model integration.",
+        link: "https://calendly.com/ubaidismail/30min",
+    },
+    {
+        title: "Web Design & Development",
         description:
             "Includes design & development of Websites, WordPress, Web Apps, Portals, LMS Systems, ERP Systems, Inventory Management Systems",
         link: "https://calendly.com/ubaidismail/30min",
@@ -55,11 +61,6 @@ export const projects = [
     {
         title: "API Development and Integration",
         description:"Custom API development, Integration with third-party services (payment gateways, social media APIs), RESTful and GraphQL APIs, API documentation and management",
-        link: "https://calendly.com/ubaidismail/30min",
-    },
-    {
-        title: "AI Integration / Model Development",
-        description:"Natural Language Processing (NLP) applications (e.g., chatbots), OPEN AI API Integration, Data science and model training",
         link: "https://calendly.com/ubaidismail/30min",
     },
     {

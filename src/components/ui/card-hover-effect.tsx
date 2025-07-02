@@ -16,6 +16,7 @@ export const HoverEffect = ({
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
+
   return (
     <div
       className={cn(
@@ -68,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-[#333333] dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -86,7 +87,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 text-[19px] font-bold tracking-wide mt-4 bg-gradient-to-r from-pink-500 to-purple-500 bg-[length:100%_2px] bg-no-repeat bg-bottom", className)}>
       {children}
     </h4>
   );

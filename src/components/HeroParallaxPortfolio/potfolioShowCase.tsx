@@ -26,9 +26,9 @@ export function AppleCardsCarouselDemo() {
   ));
 
   return (
-    
+
     <div className="w-full h-[100vh] sm:h-full py-20">
-      
+
       <h1 className="max-w-7xl mt-[70px] pl-4 mx-auto text-xl md:text-5xl font-bold  font-sans">
         Showcase
       </h1>
@@ -44,8 +44,8 @@ const ContentPHH = () => {
         return (
           <div
             key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
+              
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
                 Pet Health Harbour is a pet portal
@@ -54,7 +54,7 @@ const ContentPHH = () => {
               <br />
               <a href="https://pethealthharbour.com/" className="Wb_link" target="_blank">Pethealthharbour.com</a>
             </p>
-            
+
             <Image
               src={PHHPortfolio1}
               alt="Pet Health Harbour"
@@ -86,13 +86,13 @@ const ContentDSDT = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-              The DSDT Career Portal
+                The DSDT Career Portal
               </span>{" "}
               is an online platform designed to connect job seekers with employment opportunities. It offers features such as account creation and job application management. Users can sign in with their Microsoft accounts or create a new account to access the portal's services.
               <br />
               <a href="https://jobportal.dsdtcareerportal.com/" className="Wb_link" target="_blank">DSDTCareerPortal.com</a>
             </p>
-            
+
             <Image
               src={DSDTInner}
               alt="DSDT Career Portal"
@@ -100,7 +100,7 @@ const ContentDSDT = () => {
               width="500"
               className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
             />
-            
+
           </div>
         );
       })}
@@ -124,7 +124,7 @@ const ContentRPT = () => {
               <br />
               <a href="https://www.royalpickups.com/" className="Wb_link" target="_blank">RoyalPickups.com</a>
             </p>
-            
+
             <Image
               src={RPTInner}
               alt="RPT"
@@ -162,7 +162,7 @@ const ContentCiptoItlaliano = () => {
               <br />
               <a href="https://criptovalutegruppoitaliano.it/" className="Wb_link" target="_blank">Criptovalutegruppoitaliano.it</a>
             </p>
-            
+
           </div>
         );
       })}
@@ -180,13 +180,13 @@ const ContentJob3 = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-               This Portal helps Web3 professionals
+                This Portal helps Web3 professionals
               </span>{" "}
               find their dream job in the right field. Discover 1,900+ remote Web3 Jobs around the world at companies working on blockchain, AI, smart contract, DeFi, NFT, crypto etc. Reach and hire 20,000+ remote workers in web3 space every month. Here you will find the best remote web3 job offers and the best candidates
               <br />
               <a href="https://job3net.com/" className="Wb_link" target="_blank">Job3net.com</a>
             </p>
-            
+
           </div>
         );
       })}
@@ -204,13 +204,13 @@ const ContentShopify = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-               Shopify Store for Art Dicacao
+                Shopify Store for Art Dicacao
               </span>{" "}
-              
+
               <br />
               <a href="https://artdicacao.com/" className="Wb_link" target="_blank">Artdicacao.com</a>
             </p>
-            
+
           </div>
         );
       })}
@@ -226,8 +226,8 @@ const data = [
     src: PPHImage,
     content: <ContentPHH />,
     likeBTN: <LikeButton projectTitle="Pet Health Harbour" />,
-    
-    
+
+
   },
   {
     category: "Job Portal",
@@ -236,7 +236,7 @@ const data = [
     content: <ContentDSDT />,
     likeBTN: <LikeButton projectTitle="EDU Career Portal" />,
   },
- 
+
   {
     category: "Aiport Transfer Service",
     title: "Royal Pickups",
@@ -262,7 +262,7 @@ const data = [
     likeBTN: <LikeButton projectTitle="Job3 Net" />,
 
   },
- 
+
   {
     category: "Shopify Store",
     title: "Art Dicacao",
