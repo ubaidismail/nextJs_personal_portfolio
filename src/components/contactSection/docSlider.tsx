@@ -37,7 +37,7 @@ export default function FloatingDockDemo() {
       icon: (
         <IconBrandWhatsapp className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href:"https://wa.me/+971507364124",
+      href:"https://wa.me/+18253055570",
       EventTarget:'_blank',
     },
     {
