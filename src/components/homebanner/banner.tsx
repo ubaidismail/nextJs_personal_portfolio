@@ -67,9 +67,8 @@ export default function HeroHighlightDemo() {
             </div>
           </div>
           <div className="self-img hidden sm:block ">
-            <Image src="/images/ubaid.jpeg" width={400}
-              height={400} alt="Ubaid Ismail"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            <Image src="/images/ubaid.jpg" width={300}
+              height={300} alt="Ubaid Ismail"
             />
           </div>
         </div>
