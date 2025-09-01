@@ -13,11 +13,11 @@ export default function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <Link href={'/'}>
-          <MenuItem setActive={setActive} active={active} item="Home">
+          <MenuItem setActive={setActive} active={active} item="Home.">
           </MenuItem>
         </Link>
         <Link href={'/portfolio'}>
-          <MenuItem setActive={setActive} active={active} item="Portfolio">
+          <MenuItem setActive={setActive} active={active} item="Portfolio.">
           </MenuItem>
         </Link>
         {/* <Link href={'/blog'}>
@@ -25,13 +25,13 @@ export default function Navbar({ className }: { className?: string }) {
           </MenuItem>
         </Link> */}
         <Link href={'/contact'}>
-          <MenuItem setActive={setActive} active={active} item="Connect">
+          <MenuItem setActive={setActive} active={active} item="Contact.">
           </MenuItem>
         </Link>
-        <Link href={'/UbaidIsmailCV.pdf'} target="_blank">
+        {/* <Link href={'/UbaidIsmailCV.pdf'} target="_blank">
           <MenuItem setActive={setActive}  active={active} item="Resume">
           </MenuItem>
-        </Link>
+        </Link> */}
         
 
       </Menu>
