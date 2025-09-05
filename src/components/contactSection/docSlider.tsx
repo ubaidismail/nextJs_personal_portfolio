@@ -67,7 +67,20 @@ export default function FloatingDockDemo() {
   ];
   return (
     <div className="flex items-center justify-center h-[35rem] w-full flex-col">
-        <h1 className='sm:text-7xl text-3xl font-bold text-white dark:text-white text-center pb-[40px]'>Let's Conect!</h1>
+        <div className="text-center pb-[40px]">
+          <h1 className='sm:text-7xl text-3xl font-bold text-white dark:text-white text-center mb-6'>
+            Ready to Transform Your Business?
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+            Let's discuss your project and explore how we can accelerate your digital transformation. 
+            <strong className="text-purple-400"> Free consultation</strong> - no strings attached.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+            <span className="bg-gray-800 px-3 py-1 rounded-full">✓ 300+ Projects Delivered</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full">✓ 6+ Years Experience</span>
+            <span className="bg-gray-800 px-3 py-1 rounded-full">✓ 24/7 Support</span>
+          </div>
+        </div>
       <FloatingDock
         mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}

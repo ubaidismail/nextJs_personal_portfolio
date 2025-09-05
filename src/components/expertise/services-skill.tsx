@@ -22,51 +22,32 @@ export default function CardHoverEffectDemo() {
 }
 export const projects = [
     {
-        title: "AI Agents & Workflow Automation",
+        title: "AI Automation & Intelligent Solutions",
         description:
-            "Includes AI agent development using AgentKit, AI-powered automation with Make.com and n8n, AI-powered chatbots, AI-based process automation, custom AI apps, and AI model integration.",
+            "Transform your business with AI-powered automation using AgentKit, Make.com, and n8n. Build intelligent chatbots, automate complex workflows, and integrate custom AI models. Reduce manual work by 80% while increasing efficiency and accuracy.",
         link: "https://calendly.com/ubaidismail/30min",
     },
     {
-        title: "Web Design & Development",
+        title: "Full-Stack Web Development",
         description:
-            "Includes design & development of Websites, WordPress, Web Apps, Portals, LMS Systems, ERP Systems, Inventory Management Systems",
+            "Complete web solutions from concept to deployment. Specialized in React, Node.js, WordPress, and modern frameworks. Build responsive websites, web applications, LMS systems, ERP solutions, and inventory management platforms that scale with your business.",
         link: "https://calendly.com/ubaidismail/30min",
     },
     {
-        title: "Custom Software Development",
+        title: "Enterprise Software Solutions",
         description:
-            "Includes SaaS product development, CRM, ERP, and custom enterprise solutions, Industry-specific software solutions (healthcare, real estate, finance) Cloud-native development (AWS, Azure, Google Cloud)",
-        link: "https://calendly.com/ubaidismail/30min",
-    },
-    // {
-    //     title: "Mobile App Development",
-    //     description:
-    //         "Native app development (iOS, Android) Cross-platform app development (React Native, Flutter), Progressive Web Apps for mobile, App maintenance and upgrades",
-    //     link: "https://calendly.com/ubaidismail/30min",
-    // },
-    // {
-    //     title: "UI/UX - Graphic Design",
-    //     description:
-    //         "Wireframing and prototyping, User research and persona development, Mobile and web design, Product design for SaaS applications, User interface and experience optimization",
-    //     link: "https://calendly.com/ubaidismail/30min",
-    // },
-    // {
-    //     title: "Business - Sales Funnels Development",
-    //     description:
-    //         "Lead generation, client hunting through various platform, Keen-eye in finding hidden opportunities",
-    //     link: "https://calendly.com/ubaidismail/30min",
-    // },
-
-    {
-        title: "API Development & Integration",
-        description: "Custom API development, Integration with third-party services (payment gateways, social media APIs), RESTful and GraphQL APIs, API documentation and management",
+            "Custom SaaS development, CRM/ERP systems, and industry-specific solutions for healthcare, real estate, and finance. Cloud-native development on AWS, and Google Cloud. Scalable architecture designed for growth and performance.",
         link: "https://calendly.com/ubaidismail/30min",
     },
     {
-        title: "Consulting & Digital Transformation",
+        title: "API Development & System Integration",
+        description: "Robust API development with RESTful and GraphQL architectures. Seamless third-party integrations including payment gateways, social media APIs, and enterprise systems. Complete API documentation and management solutions.",
+        link: "https://calendly.com/ubaidismail/30min",
+    },
+    {
+        title: "Digital Transformation Consulting",
         description:
-            "Digital strategy and transformation consulting, Technology stack evaluation and selection, IT and business process optimization, Data migration and systems integration",
+            "Strategic technology consulting to modernize your business. Technology stack evaluation, process optimization, data migration, and systems integration. Transform legacy systems into modern, efficient digital solutions.",
         link: "https://calendly.com/ubaidismail/30min",
     },
 ];

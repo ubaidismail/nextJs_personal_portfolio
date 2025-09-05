@@ -32,10 +32,16 @@ export default function HeroHighlightDemo() {
             >
               {" "} 
               <Highlight className="text-black dark:text-white ">
-                Hi, It's Ubaid Ismail
+                Hi, I'm Ubaid Ismail
               </Highlight>
               {" "}<br />
-              Helping startups & businesses launch MVPs and scalable web solutions—fast.
+              Full-Stack Developer & AI Solutions Expert<br />
+              <span className="text-lg md:text-2xl lg:text-3xl font-medium text-gray-300">
+                Transforming Ideas Into Scalable Digital Solutions
+              </span><br />
+              <span className="text-base md:text-lg text-gray-400">
+                6+ Years Experience • 300+ Projects Delivered • MVP to Enterprise
+              </span>
               
             </motion.h1>
             <div className="md:flex md:align-center md:justify-first">

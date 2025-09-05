@@ -28,10 +28,20 @@ export function AppleCardsCarouselDemo() {
   return (
 
     <div className="w-full h-[100vh] sm:h-full py-20">
-
-      <h1 className="max-w-7xl mt-[70px] pl-4 mx-auto text-xl md:text-5xl font-bold  font-sans">
-        Showcase
-      </h1>
+      <div className="max-w-7xl mx-auto px-4">
+        <h1 className="mt-[70px] text-xl md:text-5xl font-bold font-sans text-center mb-4">
+          Portfolio Showcase
+        </h1>
+        <p className="text-lg md:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8">
+          Explore <strong className="text-purple-400">300+ successful projects</strong> across diverse industries. 
+          From AI-powered platforms to custom solutions, see how I transform ideas into scalable digital products.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-12">
+          <span className="bg-gray-800 px-3 py-1 rounded-full">✓ SaaS Platforms</span>
+          <span className="bg-gray-800 px-3 py-1 rounded-full">✓ E-commerce Solutions</span>
+          <span className="bg-gray-800 px-3 py-1 rounded-full">✓ AI Integration</span>
+        </div>
+      </div>
       <Carousel items={cards} />
     </div>
   );
@@ -48,9 +58,11 @@ const ContentPHH = () => {
               
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                Pet Health Harbour is a pet portal
+                Pet Health Harbour - Comprehensive Pet Health Management Platform
               </span>{" "}
-              that helps pet owners to manage their pet's health and activities. The website offers a range of resources, including peer-reviewed articles authored by veterinarians, covering topics such as eye health, skin conditions, dental care, and aging in both dogs and cats. The website's founding veterinarians bring nearly 100 years of combined clinical expertise, ensuring that the information provided is both reliable and comprehensive.While some content is freely accessible, Pet Health Harbour offers subscription plans for unlimited access to all articles and resources. New users can register for a free trial to explore the platform's offerings.
+              A full-stack web application built with PHP and WordPress, featuring subscription-based content management, user authentication, and veterinary expertise integration. The platform includes peer-reviewed articles, health tracking tools, and comprehensive pet care resources. Built with scalable architecture and modern UI/UX design principles.
+              <br />
+              <strong className="text-purple-400">Technologies:</strong> PHP, WordPress Custom, Mysql, Stripe Integration, Responsive Design
               <br />
               <a href="https://pethealthharbour.com/" className="Wb_link" target="_blank">Pethealthharbour.com</a>
             </p>
@@ -86,9 +98,11 @@ const ContentDSDT = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The DSDT Career Portal
+                DSDT Career Portal - Advanced Job Matching Platform
               </span>{" "}
-              is an online platform designed to connect job seekers with employment opportunities. It offers features such as account creation and job application management. Users can sign in with their Microsoft accounts or create a new account to access the portal's services.
+              A sophisticated job portal featuring Microsoft SSO integration, advanced job matching algorithms, and comprehensive application management. Built with enterprise-grade security and scalable architecture to handle thousands of job seekers and employers simultaneously.
+              <br />
+              <strong className="text-purple-400">Technologies:</strong> PHP, Laravel, Microsoft Graph API, MySQL
               <br />
               <a href="https://jobportal.dsdtcareerportal.com/" className="Wb_link" target="_blank">DSDTCareerPortal.com</a>
             </p>
@@ -118,9 +132,11 @@ const ContentRPT = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                Royal Pickups is airport transfer service portal
+                Royal Pickups - Premium Airport Transfer Service Platform
               </span>{" "}
-              providing exceptional airport transfer services across multiple countries, ensuring a seamless and luxurious travel experience for all the clients.
+              A luxury transportation booking platform with real-time tracking, multi-country operations, and seamless payment processing. Features include dynamic pricing, driver management, and customer relationship management systems.
+              <br />
+              <strong className="text-purple-400">Technologies:</strong> PHP, Payment Gateway Integration, Real-time Tracking, Multi-language Support
               <br />
               <a href="https://www.royalpickups.com/" className="Wb_link" target="_blank">RoyalPickups.com</a>
             </p>
@@ -156,9 +172,11 @@ const ContentCiptoItlaliano = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                #1 community for those who want to invest and earn with crypto starting from ZERO
+                Crypto Community Platform - Leading Italian Cryptocurrency Education Hub
               </span>{" "}
-              {/* providing exceptional airport transfer services across multiple countries, ensuring a seamless and luxurious travel experience for all the clients. */}
+              A comprehensive cryptocurrency education and community platform featuring real-time market data, educational content, and community features. Built with advanced analytics and user engagement tools.
+              <br />
+              <strong className="text-purple-400">Technologies:</strong> PHP, CodeIgniter, Real-time Data APIs, Community Features, Analytics Dashboard
               <br />
               <a href="https://criptovalutegruppoitaliano.it/" className="Wb_link" target="_blank">Criptovalutegruppoitaliano.it</a>
             </p>
@@ -180,9 +198,11 @@ const ContentJob3 = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                This Portal helps Web3 professionals
+                Job3Net - Premier Web3 Job Marketplace Platform
               </span>{" "}
-              find their dream job in the right field. Discover 1,900+ remote Web3 Jobs around the world at companies working on blockchain, AI, smart contract, DeFi, NFT, crypto etc. Reach and hire 20,000+ remote workers in web3 space every month. Here you will find the best remote web3 job offers and the best candidates
+              A specialized recruitment platform connecting Web3 professionals with blockchain companies worldwide. Features include advanced job matching, candidate screening, and comprehensive Web3 industry coverage with 1,900+ active positions.
+              <br />
+              <strong className="text-purple-400">Technologies:</strong> PHP, CodeIgniter, Candidate Management System
               <br />
               <a href="https://job3net.com/" className="Wb_link" target="_blank">Job3net.com</a>
             </p>
@@ -204,9 +224,11 @@ const ContentShopify = () => {
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                Shopify Store for Art Dicacao
+                Art Dicacao - Custom E-commerce Platform
               </span>{" "}
-
+              A fully customized Shopify store with advanced product management, payment processing, and customer experience optimization. Features include custom themes, inventory management, and integrated marketing tools.
+              <br />
+              <strong className="text-purple-400">Technologies:</strong> Shopify, Custom Liquid Templates, Payment Integration, SEO Optimization, Analytics
               <br />
               <a href="https://artdicacao.com/" className="Wb_link" target="_blank">Artdicacao.com</a>
             </p>
