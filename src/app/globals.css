@@ -159,7 +159,21 @@ ol, ul {
     left:-12%;
   }
 }
+nav a:after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  z-index: 999;
+  background: #f97315;
+  width: 6px;
+  height: 5px;
+  bottom: 6px;
+  border-radius: 50px;
+}
 
+nav a {
+  position: relative;
+}
 /* //  HEART CODE */
 .altheart {
   background: url(
@@ -207,6 +221,28 @@ http://static.indigoimages.ca/2016/shop/113439_img25_twotoneheart.png) no-repeat
 }
 .ban-txt {
   margin-right: 95px;
+}
+.gradient-frame {
+  background: linear-gradient(120deg, #fff, #f97316, #fff);
+  background-size: 200% 200%;
+  animation: gradientBorderShift 4s ease-in-out infinite;
+  padding: 6px;
+  border-radius: 24px;
+}
+.gradient-frame img {
+  border-radius: 20px;
+  display: block;
+}
+@keyframes gradientBorderShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 @media only screen and (max-width:768px) {
     .banner-sec{

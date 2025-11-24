@@ -33,7 +33,7 @@ export function AppleCardsCarouselDemo() {
           Portfolio Showcase
         </h1>
         <p className="text-lg md:text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8">
-          Explore <strong className="text-purple-400">300+ successful projects</strong> across diverse industries. 
+          Explore <strong className="text-orange-400">300+ successful projects</strong> across diverse industries. 
           From AI-powered platforms to custom solutions, see how I transform ideas into scalable digital products.
         </p>
         <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-12">
@@ -62,7 +62,7 @@ const ContentPHH = () => {
               </span>{" "}
               A full-stack web application built with PHP and WordPress, featuring subscription-based content management, user authentication, and veterinary expertise integration. The platform includes peer-reviewed articles, health tracking tools, and comprehensive pet care resources. Built with scalable architecture and modern UI/UX design principles.
               <br />
-              <strong className="text-purple-400">Technologies:</strong> PHP, WordPress Custom, Mysql, Stripe Integration, Responsive Design
+              <strong className="text-orange-400">Technologies:</strong> PHP, WordPress Custom, Mysql, Stripe Integration, Responsive Design
               <br />
               <a href="https://pethealthharbour.com/" className="Wb_link" target="_blank">Pethealthharbour.com</a>
             </p>
@@ -102,7 +102,7 @@ const ContentDSDT = () => {
               </span>{" "}
               A sophisticated job portal featuring Microsoft SSO integration, advanced job matching algorithms, and comprehensive application management. Built with enterprise-grade security and scalable architecture to handle thousands of job seekers and employers simultaneously.
               <br />
-              <strong className="text-purple-400">Technologies:</strong> PHP, Laravel, Microsoft Graph API, MySQL
+              <strong className="text-orange-400">Technologies:</strong> PHP, Laravel, Microsoft Graph API, MySQL
               <br />
               <a href="https://jobportal.dsdtcareerportal.com/" className="Wb_link" target="_blank">DSDTCareerPortal.com</a>
             </p>
@@ -136,7 +136,7 @@ const ContentRPT = () => {
               </span>{" "}
               A luxury transportation booking platform with real-time tracking, multi-country operations, and seamless payment processing. Features include dynamic pricing, driver management, and customer relationship management systems.
               <br />
-              <strong className="text-purple-400">Technologies:</strong> PHP, Payment Gateway Integration, Real-time Tracking, Multi-language Support
+              <strong className="text-orange-400">Technologies:</strong> PHP, Payment Gateway Integration, Real-time Tracking, Multi-language Support
               <br />
               <a href="https://www.royalpickups.com/" className="Wb_link" target="_blank">RoyalPickups.com</a>
             </p>
@@ -176,7 +176,7 @@ const ContentCiptoItlaliano = () => {
               </span>{" "}
               A comprehensive cryptocurrency education and community platform featuring real-time market data, educational content, and community features. Built with advanced analytics and user engagement tools.
               <br />
-              <strong className="text-purple-400">Technologies:</strong> PHP, CodeIgniter, Real-time Data APIs, Community Features, Analytics Dashboard
+              <strong className="text-orange-400">Technologies:</strong> PHP, CodeIgniter, Real-time Data APIs, Community Features, Analytics Dashboard
               <br />
               <a href="https://criptovalutegruppoitaliano.it/" className="Wb_link" target="_blank">Criptovalutegruppoitaliano.it</a>
             </p>
@@ -202,7 +202,7 @@ const ContentJob3 = () => {
               </span>{" "}
               A specialized recruitment platform connecting Web3 professionals with blockchain companies worldwide. Features include advanced job matching, candidate screening, and comprehensive Web3 industry coverage with 1,900+ active positions.
               <br />
-              <strong className="text-purple-400">Technologies:</strong> PHP, CodeIgniter, Candidate Management System
+              <strong className="text-orange-400">Technologies:</strong> PHP, CodeIgniter, Candidate Management System
               <br />
               <a href="https://job3net.com/" className="Wb_link" target="_blank">Job3net.com</a>
             </p>
@@ -228,7 +228,7 @@ const ContentShopify = () => {
               </span>{" "}
               A fully customized Shopify store with advanced product management, payment processing, and customer experience optimization. Features include custom themes, inventory management, and integrated marketing tools.
               <br />
-              <strong className="text-purple-400">Technologies:</strong> Shopify, Custom Liquid Templates, Payment Integration, SEO Optimization, Analytics
+              <strong className="text-orange-400">Technologies:</strong> Shopify, Custom Liquid Templates, Payment Integration, SEO Optimization, Analytics
               <br />
               <a href="https://artdicacao.com/" className="Wb_link" target="_blank">Artdicacao.com</a>
             </p>

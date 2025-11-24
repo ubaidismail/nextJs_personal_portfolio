@@ -73,7 +73,7 @@ export default function FloatingDockDemo() {
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Let's discuss your project and explore how we can accelerate your digital transformation. 
-            <strong className="text-purple-400"> Free consultation</strong> - no strings attached.
+            <strong className="text-orange-400"> Free consultation</strong> - no strings attached.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
             <span className="bg-gray-800 px-3 py-1 rounded-full">✓ 300+ Projects Delivered</span>
