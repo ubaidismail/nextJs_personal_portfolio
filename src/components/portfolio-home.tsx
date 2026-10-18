@@ -394,15 +394,6 @@ function SiteHeader({
         UI<span>.</span>
       </a>
 
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#journey">Journey</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#design">Design</a>
-      <a href="#projects">Projects</a>
-      </nav>
-
       <button
         className="theme-toggle"
         onClick={onToggleTheme}
