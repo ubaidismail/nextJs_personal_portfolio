@@ -4,9 +4,24 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import Image from "next/image";
 import {
   IconAward,
+  IconArrowUp,
+  IconArrowUpRight,
   IconBrain,
+  IconBulb,
+  IconChessKnight,
   IconCode,
   IconLink,
+  IconMail,
+  IconMoon,
+  IconNetwork,
+  IconNotebook,
+  IconPool,
+  IconPuzzle,
+  IconRoad,
+  IconSchool,
+  IconSparkles,
+  IconSun,
+  IconTarget2,
   IconVideo,
   IconWorld,
 } from "@tabler/icons-react";
@@ -231,34 +246,36 @@ const certifications: Certification[] = [
 ];
 
 const interestItems = [
-  { icon: "♟", title: "Chess", description: "Thinking three moves ahead." },
-  { icon: "↗", title: "Long walks", description: "Letting ideas find their way." },
-  { icon: "◉", title: "Pool", description: "Precision, patience, and a little luck." },
-  { icon: "✎", title: "Substack", description: "Feeding my curiosity, one essay at a time." },
+  { icon: <IconChessKnight size={20} stroke={1.7} />, title: "Chess", description: "Thinking three moves ahead." },
+  { icon: <IconRoad size={20} stroke={1.7} />, title: "Long walks", description: "Letting ideas find their way." },
+  { icon: <IconPool size={20} stroke={1.7} />, title: "Pool", description: "Precision, patience, and a little luck." },
+  { icon: <IconNotebook size={20} stroke={1.7} />, title: "Substack", description: "Feeding my curiosity, one essay at a time." },
 ];
 
 const valueCards = [
   {
-    icon: "▣",
+    icon: <IconNetwork size={19} stroke={1.7} />,
     title: "Clear Communication",
     description: "Collaborative, proactive and transparent from kickoff to launch.",
   },
   {
-    icon: "◉",
+    icon: <IconBrain size={19} stroke={1.7} />,
     title: "Problem Solver",
     description: "I turn messy, complex challenges into calm, clear solutions.",
   },
   {
-    icon: "⌘",
+    icon: <IconBulb size={19} stroke={1.7} />,
     title: "Curious Learner",
     description: "Always exploring tools and ideas that make better products.",
   },
   {
-    icon: "↗",
+    icon: <IconTarget2 size={19} stroke={1.7} />,
     title: "User Focused",
     description: "I refine workflows with real feedback from the people using them.",
   },
 ];
+
+const skillIconTypes = [IconCode, IconPuzzle, IconNetwork, IconBulb];
 
 function getLocalTimeThought(): TimeThought {
   const now = new Date();
@@ -399,7 +416,7 @@ function SiteHeader({
         onClick={onToggleTheme}
         aria-label={`Switch to ${dark ? "light" : "dark"} theme`}
       >
-        {dark ? "☼" : "◐"}
+        {dark ? <IconSun className="ui-icon" size={18} stroke={1.7} /> : <IconMoon className="ui-icon" size={18} stroke={1.7} />}
         <span>{dark ? "Light" : "Dark"}</span>
       </button>
     </header>
@@ -433,16 +450,19 @@ function HeroSection({ thought }: { thought: TimeThought }) {
 
       <div className="social-links">
         <a href="https://github.com/ubaidismail" target="_blank" rel="noreferrer">
-          ⌘ GitHub ↗
+          GitHub <IconArrowUpRight className="ui-icon" size={16} stroke={1.5} aria-hidden="true" />
         </a>
         <a href="https://www.linkedin.com/in/ubaidismail/" target="_blank" rel="noreferrer">
-          in LinkedIn ↗
+          LinkedIn <IconArrowUpRight className="ui-icon" size={16} stroke={1.5} aria-hidden="true" />
         </a>
-        <a href="/">▣ Portfolio ↗</a>
+        <a href="/">Portfolio <IconArrowUpRight className="ui-icon" size={16} stroke={1.5} aria-hidden="true" /></a>
         <a className="social-primary" href="/UbaidIsmailCV.pdf" target="_blank">
-          ⇩ Resume PDF
+          <svg className="ui-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+          </svg>
+          Resume PDF
         </a>
-        <a href="mailto:ubaidismail378@gmail.com">✉ Say hello</a>
+        <a href="mailto:ubaidismail378@gmail.com"><IconMail className="ui-icon" size={16} stroke={1.5} aria-hidden="true" /> Say hello</a>
       </div>
     </section>
   );
@@ -488,10 +508,10 @@ function AboutSection() {
             with stakeholders throughout the product cycle.
           </p>
           <div className="about-facts">
-            <span>🎯 <b>Design first:</b> Research, flows &amp; prototyping</span>
-            <span>🧩 <b>Product minded:</b> From requirements to release</span>
-            <span>🛠️ <b>Engineering aware:</b> Design through production</span>
-            <span>🤝 <b>Collaborative:</b> Stakeholders and end users</span>
+            <span><IconTarget2 className="ui-icon" size={16} aria-hidden="true" /><span><b>Design first:</b> Research, flows &amp; prototyping</span></span>
+            <span><IconPuzzle className="ui-icon" size={16} aria-hidden="true" /><span><b>Product minded:</b> From requirements to release</span></span>
+            <span><IconCode className="ui-icon" size={16} aria-hidden="true" /><span><b>Engineering aware:</b> Design through production</span></span>
+            <span><IconNetwork className="ui-icon" size={16} aria-hidden="true" /><span><b>Collaborative:</b> Stakeholders and end users</span></span>
           </div>
         </div>
       </article>
@@ -536,10 +556,11 @@ function ExpertiseSection() {
         <div className="skill-group" key={group.category}>
           <div className="skill-label">{group.category}</div>
           <div className="skill-grid">
-            {group.skills.map((skill, skillIndex) => (
-              <div className="skill-card" key={skill}>
+            {group.skills.map((skill, skillIndex) => {
+              const SkillIcon = skillIconTypes[skillIndex % skillIconTypes.length];
+              return <div className="skill-card" key={skill}>
                 <span className="skill-icon">
-                  {["▧", "⌘", "◇", "◈"][skillIndex % 4]}
+                  <SkillIcon size={16} stroke={1.7} aria-hidden="true" />
                 </span>
                 <span>{skill}</span>
                 <small>
@@ -553,8 +574,8 @@ function ExpertiseSection() {
                     />
                   ))}
                 </div>
-              </div>
-            ))}
+              </div>;
+            })}
           </div>
         </div>
       ))}
@@ -606,7 +627,7 @@ function EducationSection() {
       </SectionHeading>
 
       <div className="education-card">
-        <span aria-hidden="true">◉</span>
+        <span aria-hidden="true"><IconSchool className="ui-icon" size={20} /></span>
         <div>
           <h3>Bachelor in Business and Information Technology (BBIT)</h3>
           <p>Virtual University of Pakistan</p>
@@ -634,7 +655,7 @@ function CertificationsSection() {
               <h3>
                 {certification.link ? (
                   <a href={certification.link} target="_blank" rel="noreferrer">
-                    {certification.title} ↗
+                    {certification.title} <IconArrowUpRight className="ui-icon" size={16} aria-hidden="true" />
                   </a>
                 ) : certification.title}
               </h3>
@@ -707,7 +728,7 @@ function DesignProjectsSection() {
           <h2>Designing for the details.</h2>
           <p>Selected interfaces shaped around real people, clear flows, and everyday tasks.</p>
         </div>
-        <span className="design-tool-label"><span aria-hidden="true">✳</span> UI / UX DESIGN</span>
+        <span className="design-tool-label"><IconSparkles className="ui-icon" size={16} aria-hidden="true" /> UI / UX DESIGN</span>
       </div>
 
       <div className="design-project-grid">
@@ -744,7 +765,7 @@ function ContactSection() {
       
       <div className="mt-3">
         <a className="contact-primary" href="mailto:ubaidismail378@gmail.com">
-          Send an Email ↗
+          Send an Email <IconArrowUpRight className="ui-icon" size={16} aria-hidden="true" />
         </a>
       </div>
     </section>
@@ -754,7 +775,7 @@ function ContactSection() {
 function SiteFooter() {
   return (
     <footer className="site-footer">
-      <p>© {new Date().getFullYear()} Ubaid Ismail · Built with precision, code &amp; care ☕</p>
+      <p>© {new Date().getFullYear()} Ubaid Ismail · Built with precision, code &amp; care</p>
       <nav aria-label="Footer navigation">
         <a href="https://www.linkedin.com/in/ubaidismail/" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="https://github.com/ubaidismail" target="_blank" rel="noreferrer">GitHub</a>
@@ -818,7 +839,7 @@ export default function PortfolioHome() {
 
       <SiteFooter />
       <a className="back-top" href="#home" aria-label="Back to top">
-        ↑
+        <IconArrowUp className="ui-icon" size={16} aria-hidden="true" />
       </a>
     </div>
   );

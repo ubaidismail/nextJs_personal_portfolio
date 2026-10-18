@@ -1683,6 +1683,13 @@ body { font-size:16px; }
 .design-project-copy p { margin:0;color:var(--muted);font-size:14px;line-height:1.65; }
 .design-tags { display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:18px; }
 .design-tags span { padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:var(--surface-soft);color:var(--muted);font-size:10px; }
+.ui-icon { display:inline-block;width:1em;height:1em;flex:none;vertical-align:-.15em; }
+.social-links a { display:inline-flex;align-items:center;justify-content:center;gap:6px; }
+.about-facts > span { display:flex;align-items:flex-start;gap:8px; }
+.about-facts > span > span { min-width:0; }
+.value-card>span,.interest-item>span { display:inline-flex;align-items:center;justify-content:center; }
+.back-top { display:grid;place-items:center; }
+@media(max-width:700px) { .about-facts { grid-template-columns:1fr; } }
 @media(max-width:700px) {
   .design-section { padding:21px 16px;border-radius:20px; }
   .design-section-heading { align-items:flex-start;flex-direction:column;margin-bottom:20px; }
