@@ -252,22 +252,6 @@ const data = [
 
   },
   {
-    category: "Job Portal",
-    title: "EDU Career Portal",
-    src: DSDTImage,
-    content: <ContentDSDT />,
-    likeBTN: <LikeButton projectTitle="EDU Career Portal" />,
-  },
-
-  {
-    category: "Aiport Transfer Service",
-    title: "Royal Pickups",
-    src: RPT,
-    content: <ContentRPT />,
-    likeBTN: <LikeButton projectTitle="Royal Pickups" />,
-
-  },
-  {
     category: "Crypto Currency",
     title: "Crypto Community",
     src: CRIPTOValue,
