@@ -226,6 +226,12 @@ const designProjects: {
 
 const certifications: Certification[] = [
   {
+    title: "Figma Essentials Training",
+    issuer: "LinkedIn Learning",
+    description: "Certificate in Figma essentials training.",
+    link: "https://www.linkedin.com/learning/certificates/1213692bfa8724942bb48c63cc8f67bfcea3d60a003336cc1980b2c0da8cf0db?trk=share_certificate",
+  },
+  {
     title: "Design Psychology: Master the Art and Science of UX Design",
     issuer: "LinkedIn Learning",
     description: "Certificate in the psychology and principles behind effective UX design.",
