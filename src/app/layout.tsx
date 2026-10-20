@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
 import localFont from "next/font/local";
+import IntroAnimation from "@/components/IntroAnimation";
+
 import "./globals.css";
 import { AppProvider } from "@/context/AppContext";
 
@@ -77,6 +79,7 @@ return (
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
       <main className="relative z-10 flex min-h-screen flex-col">
+        <IntroAnimation />
         <AppProvider>{children}</AppProvider>
         <Analytics />
       </main>

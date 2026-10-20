@@ -262,11 +262,12 @@ a {
   position: relative;
   width: 82px;
   height: 82px;
-  border-radius: 30%;
+  border-radius: 100%;
   overflow: hidden;
   margin: 18px auto 12px;
+  background-color: #262629;
   border: 3px solid var(--surface);
-  outline: 1px solid rgb(204 226 217);
+  outline: 1px solid #cce2d9;
   box-shadow: 0 14px 32px rgba(30, 41, 59, .2), 0 0 0 6px rgb(238 249 245), 0 0 34px rgb(238 249 245);
 }
 

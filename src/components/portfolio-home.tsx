@@ -434,7 +434,7 @@ function HeroSection({ thought }: { thought: TimeThought }) {
     <section className="hero section-rule">
       <div className="portrait">
         <Image
-          src="/images/moods-avatar.svg"
+          src="/images/ubaid.gif"
           alt="Illustrated avatar"
           fill
           priority
@@ -793,30 +793,35 @@ function SiteFooter() {
 
 export default function PortfolioHome() {
   const [dark, setDark] = useState(false);
-  const [themeReady, setThemeReady] = useState(false);
-  const [themeChosen, setThemeChosen] = useState(false);
   const [timeThought, setTimeThought] = useState<TimeThought>({
     label: "A THOUGHT FOR NOW",
     idea: "Make the next step feel effortless.",
   });
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem("portfolio-theme");
-    if (savedTheme) {
-      setDark(savedTheme === "dark");
-      setThemeChosen(true);
-    } else {
-      setDark(window.matchMedia("(prefers-color-scheme: dark)").matches);
+    let savedTheme: string | null = null;
+    try {
+      savedTheme = window.localStorage.getItem("portfolio-theme");
+    } catch {
+      // Keep the system preference when browser storage is unavailable.
     }
-    setThemeReady(true);
+    const initialTheme = savedTheme
+      ? savedTheme === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setDark(initialTheme);
+    document.documentElement.dataset.theme = initialTheme ? "dark" : "light";
   }, []);
 
-  useEffect(() => {
-    if (!themeReady) return;
-    document.documentElement.dataset.theme = dark ? "dark" : "light";
-    if (themeChosen) localStorage.setItem("portfolio-theme", dark ? "dark" : "light");
-    else localStorage.removeItem("portfolio-theme");
-  }, [dark, themeReady, themeChosen]);
+  const toggleTheme = () => {
+    const nextDark = document.documentElement.dataset.theme !== "dark";
+    document.documentElement.dataset.theme = nextDark ? "dark" : "light";
+    setDark(nextDark);
+    try {
+      window.localStorage.setItem("portfolio-theme", nextDark ? "dark" : "light");
+    } catch {
+      // The current page theme still updates if browser storage is unavailable.
+    }
+  };
 
   useEffect(() => {
     const updateThought = () => setTimeThought(getLocalTimeThought());
@@ -829,7 +834,7 @@ export default function PortfolioHome() {
   return (
     <div className="portfolio" data-theme={dark ? "dark" : "light"}>
       <AmbientBackdrop />
-      <SiteHeader dark={dark} onToggleTheme={() => { setThemeChosen(true); setDark((current) => !current); }} />
+      <SiteHeader dark={dark} onToggleTheme={toggleTheme} />
 
       <main id="home" className="page-shell">
         <HeroSection thought={timeThought} />
