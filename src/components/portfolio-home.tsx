@@ -189,10 +189,10 @@ const projects: Project[] = [
   {
     title: "Second View",
     icon: IconCode,
-    link: "https://second-view.vercel.app/",
-    description: "A side project currently in development.",
+    link: "https://secondview.space/",
+    description: "A space and forum to share thoughts, feelings, and get advice from verified professionals.",
     technologies: ["Next.js", "Supabase", "Tailwind CSS"],
-    features: ["Preview build available"],
+    features: ["Community posts with anonymous names and verified mentors", "Manual credential review for mentors", "Thoughtful, considered space for advice and perspectives"],
   },
 ];
 
