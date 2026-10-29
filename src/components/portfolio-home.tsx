@@ -97,7 +97,7 @@ const skillGroups: SkillGroup[] = [
 
 const experiences: Experience[] = [
   {
-    title: "System Engineer (ERP UX & Product)",
+    title: "Full Stack Developer (ERP UX & Product)",
     date: "April 2026 — Present",
     company: "TNG Group · Doha, Qatar",
     summary: "Designing and improving internal ERP experiences for high-volume inventory workflows.",
@@ -110,21 +110,20 @@ const experiences: Experience[] = [
     skills: ["ERP", "UX Research", "Workflow Design", "RFID"],
   },
   {
-    title: "Senior Web App Developer",
+    title: "Full Stack Developer",
     date: "May 2022 — March 2026",
     company: "CloudTach",
     summary: "Led delivery of web products from requirements through launch, with close attention to usability and product quality.",
     highlights: [
-      "Delivered a career portal, transportation system, and pet management system from requirements through deployment.",
-      "Translated business needs into user flows, page structures, and interface layouts.",
-      "Designed pet records, health management, membership plans, and veterinary-backed content.",
-      "Presented quarterly reviews, gathered stakeholder feedback, and supported onboarding and adoption.",
+      "Designed, developed, and deployed over 10 full-stack web applications using Next.js, PHP, Laravel, and CodeIgniter.",
+      "Created 10+ websites and landing pages with Next.js and React.js to enhance user engagement.",
+      "Collaborated remotely with a dynamic team at Cloudtach, a startup focused on innovative web solutions",
     ],
     skills: ["Web Applications", "Product Design", "Requirements", "Deployment"],
   },
   {
-    title: "Web UI Designer",
-    date: "September 2020 — May 2022",
+    title: "Associate Software Engineer",
+    date: "March 2019 — May 2022",
     company: "Hashone Creatives",
     summary: "Turned product and design concepts into responsive, production-ready web experiences.",
     highlights: [
@@ -132,19 +131,9 @@ const experiences: Experience[] = [
       "Worked with design, product, and development teams to deliver on schedule.",
       "Designed and integrated APIs to improve application speed and user experience.",
     ],
-    skills: ["Figma", "WordPress", "Responsive UI", "API Integration"],
+    skills: ["MySQL", "PHP", "JavaScript", "HTML5", "CSS3", "API Integration", "Responsive Design", "Figma", "WordPress"],
   },
-  {
-    title: "Executive Web Designer",
-    date: "March 2019 — August 2020",
-    company: "Intersys Ltd",
-    summary: "Created consistent, responsive WordPress websites and reusable page systems.",
-    highlights: [
-      "Converted Figma designs into pixel-accurate WordPress websites and web apps.",
-      "Built reusable components and templates to keep pages consistent and easy for clients to manage.",
-    ],
-    skills: ["WordPress", "Figma", "Web Design", "Reusable Components"],
-  },
+
 ];
 
 const projects: Project[] = [
@@ -462,7 +451,7 @@ function HeroSection({ thought }: { thought: TimeThought }) {
           LinkedIn <IconArrowUpRight className="ui-icon" size={16} stroke={1.5} aria-hidden="true" />
         </a>
         <a href="/">Portfolio <IconArrowUpRight className="ui-icon" size={16} stroke={1.5} aria-hidden="true" /></a>
-        <a className="social-primary" href="/UbaidIsmailCV.pdf" target="_blank">
+        <a className="social-primary" href="/CVUbaidIsmail.pdf" target="_blank">
           <svg className="ui-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
           </svg>
