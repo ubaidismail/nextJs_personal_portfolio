@@ -110,7 +110,7 @@ const experiences: Experience[] = [
     skills: ["ERP", "UX Research", "Workflow Design", "RFID"],
   },
   {
-    title: "Full Stack Developer",
+    title: "Full Stack Designer/Developer",
     date: "May 2022 — March 2026",
     company: "CloudTach",
     summary: "Led delivery of web products from requirements through launch, with close attention to usability and product quality.",
@@ -122,7 +122,7 @@ const experiences: Experience[] = [
     skills: ["Web Applications", "Product Design", "Requirements", "Deployment"],
   },
   {
-    title: "Associate Software Engineer",
+    title: "Web Designer/Developer",
     date: "March 2019 — May 2022",
     company: "Hashone Creatives",
     summary: "Turned product and design concepts into responsive, production-ready web experiences.",
