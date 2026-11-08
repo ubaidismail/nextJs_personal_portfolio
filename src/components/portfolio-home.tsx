@@ -451,7 +451,7 @@ function HeroSection({ thought }: { thought: TimeThought }) {
           LinkedIn <IconArrowUpRight className="ui-icon" size={16} stroke={1.5} aria-hidden="true" />
         </a>
         <a href="/">Portfolio <IconArrowUpRight className="ui-icon" size={16} stroke={1.5} aria-hidden="true" /></a>
-        <a className="social-primary" href="/CVUbaidIsmail.pdf" target="_blank">
+        <a className="social-primary" href="/UbaidismailCV.pdf" target="_blank">
           <svg className="ui-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
           </svg>
